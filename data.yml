@@ -32,7 +32,7 @@ AVG_ACCT_BALANCE_BY_NATION:
       Engineering: true
     sql: |-
       SELECT
-        N_NAME AS N_NAME,
+        N_NAME AS N_NAMEsdfsf1,
         AVG(C_ACCTBAL) AS C_ACCTBAL
       FROM
         ${STG_DIM_CUSTOMERS_WITH_NATION}
@@ -236,7 +236,7 @@ PART_AVAILABILITY:
 PARTS_WITH_SUPPLIER:
   type: sql
   operation:
-    sqlType: View
+    sqlType: Table
     type: sql
     sql: >-
       SELECT
