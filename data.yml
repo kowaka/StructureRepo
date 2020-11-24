@@ -175,7 +175,7 @@ LIFETIME_CUSTOMER_VALUE:
         SUM(O_TOTALPRICE) AS LIFETIME_CUSTOMER_VALUE,
         C_CUSTKEY AS C_CUSTKEY, 
         C_NAME AS C_NAME, 
-        C_PHONE as C_PHONE, 
+        C_PHONE as C_PHONE3, 
         rank() over ( order by LIFETIME_CUSTOMER_VALUE) as CUSTOMER_RANK
       FROM
         ${CUSTOMER_ORDERS}
@@ -236,7 +236,7 @@ PART_AVAILABILITY:
 PARTS_WITH_SUPPLIER:
   type: sql
   operation:
-    sqlType: View
+    sqlType: Table
     type: sql
     sql: >-
       SELECT
