@@ -23,7 +23,7 @@ AVG_ACCT_BALANCE_BY_MARKET:
         ${STG_CUSTOMERS}
       GROUP BY
         C_MKTSEGMENT
-AVG_ACCT_BALANCE_BY_NATION:
+AVG_ACCT_BALANCE_BY_NATION2:
   type: sql
   operation:
     sqlType: View
