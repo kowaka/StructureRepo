@@ -172,7 +172,7 @@ LIFETIME_CUSTOMER_VALUE:
       Engineering: true
     sql: |-
       SELECT
-        SUM(O_TOTALPRICE) AS LIFETIME_CUSTOMER_VALUE,
+        SUM(O_TOTALPRICE) AS LIFETIME_CUSTOMER_VALUE1,
         C_CUSTKEY AS C_CUSTKEY, 
         C_NAME AS C_NAME, 
         C_PHONE as C_PHONE, 
@@ -190,22 +190,6 @@ NATION:
       Engineering: true
     dataset: TPCH_SF1
     table: NATION
-NewModel56:
-  type: sql
-  operation:
-    sql: |-
-      SELECT
-        LIFETIME_CUSTOMER_VALUE AS LIFETIME_CUSTOMER_VALUE,
-        C_CUSTKEY AS C_CUSTKEY,
-        C_NAME AS C_NAME,
-        C_PHONE AS C_PHONE,
-        CUSTOMER_RANK AS CUSTOMER_RANK
-      FROM
-        ${LIFETIME_CUSTOMER_VALUE}
-    lineageGroup:
-      Engineering: true
-    sqlType: View
-    type: sql
 ORDERS:
   type: sourceInput
   operation:
